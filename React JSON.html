@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <b style="padding: 20px">Javascript JSON</b>
+    </head>
+    <body>
+            <div id="rootElement"></div>
+            <script src="https://unpkg.com/react@16.3.1/umd/react.development.js"></script>
+            <script src="https://unpkg.com/react-dom@16.3.1/umd/react-dom.development.js"></script>
+            <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+            <script src="https://unpkg.com/prop-types@15.6.1/prop-types.js"></script>
+            <script type="text/babel">
+               const rootElement = document.getElementById('rootElement')
+               fetch(`http://s-domain-allhomes.s3.amazonaws.com/billable-allhomes-listings.json`)
+               .then(res => res.json())
+               .then(value => 
+                   const spanWithValue = <span style={{color: 'blue'}}>{value}</span>
+                   ReactDOM.render(spanWithValue, rootElement)
+               )
+            </script>
+    </body>
+</html>
